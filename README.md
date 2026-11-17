@@ -17,7 +17,7 @@
 
 ## 数据约定
 
-评测题目、gold 和运行产物由 ModelScope 管理；本仓库只保存 manifest、版本号、hash、下载/校验脚本和必要的小型样例。具体 ModelScope 地址和权限规则将在数据仓库建立后补充。
+评测题目、gold 和运行产物由 ModelScope 管理；本仓库只保存 manifest、版本号、hash、下载/校验脚本和必要的小型样例。评测数据归入 ModelScope 的 `evaluation-datasets` 合集；每个 benchmark 保持独立 Dataset，具体地址和 revision 由 manifest 固定。
 
 ## 计划目录
 
