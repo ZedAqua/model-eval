@@ -19,6 +19,10 @@
 
 评测题目、gold 和运行产物由 ModelScope 管理；本仓库只保存 manifest、版本号、hash、下载/校验脚本和必要的小型样例。评测数据归入 ModelScope 的 `evaluation-datasets` 合集；每个 benchmark 保持独立 Dataset，具体地址和 revision 由 manifest 固定。
 
+## 当前公开状态
+
+本仓库已公开，用于让团队先查看评测职责、协议边界和后续目录规划。当前阶段暂未上传评测 runner、scorer 或其他可执行脚本；评测题目和数据版本由 ModelScope 管理。
+
 ## 计划目录
 
 ```text
