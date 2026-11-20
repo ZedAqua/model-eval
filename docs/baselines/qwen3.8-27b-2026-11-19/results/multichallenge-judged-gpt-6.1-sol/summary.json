@@ -1,0 +1,26 @@
+{
+  "benchmark": "multichallenge",
+  "judge_model": "gpt-6.1-sol",
+  "official_commit": "5ccefcca6a39020d66c1383c4e6a809cb07afa33",
+  "questions": 273,
+  "missing_responses": 0,
+  "judge_errors": 0,
+  "overall_score": 63.65972841336724,
+  "axis_scores": {
+    "INFERENCE_MEMORY": 66.3716814159292,
+    "SELF_COHERENCE": 52.0,
+    "INSTRUCTION_RETENTION": 82.6086956521739,
+    "RELIABLE_VERSION_EDITING": 53.65853658536586
+  },
+  "axis_counts": {
+    "INFERENCE_MEMORY": 113,
+    "SELF_COHERENCE": 50,
+    "INSTRUCTION_RETENTION": 69,
+    "RELIABLE_VERSION_EDITING": 41
+  },
+  "verdicts": {
+    "NO": 93,
+    "YES": 180
+  },
+  "passed": 180
+}

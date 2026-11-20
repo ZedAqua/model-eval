@@ -1,0 +1,224 @@
+{
+  "expected": 1151,
+  "completed": 1151,
+  "correct": 1051,
+  "complete": true,
+  "accuracy": 0.9131190269331017,
+  "strict_correct": 1051,
+  "strict_accuracy": 0.9131190269331017,
+  "lenient_only": 0,
+  "invalid_output": 3,
+  "truncated": 1,
+  "completion_tokens": {
+    "mean": 858,
+    "p50": 221,
+    "p95": 2945,
+    "max": 61440
+  },
+  "by_subject": {
+    "accounting": {
+      "expected": 36,
+      "completed": 36,
+      "correct": 34,
+      "accuracy": 0.9444444444444444
+    },
+    "advanced_financial_accounting": {
+      "expected": 21,
+      "completed": 21,
+      "correct": 19,
+      "accuracy": 0.9047619047619048
+    },
+    "auditing": {
+      "expected": 32,
+      "completed": 32,
+      "correct": 28,
+      "accuracy": 0.875
+    },
+    "banking_practitioner_qualification_certificate": {
+      "expected": 116,
+      "completed": 116,
+      "correct": 106,
+      "accuracy": 0.9137931034482759
+    },
+    "central_banking": {
+      "expected": 28,
+      "completed": 28,
+      "correct": 27,
+      "accuracy": 0.9642857142857143
+    },
+    "certified_management_accountant": {
+      "expected": 18,
+      "completed": 18,
+      "correct": 17,
+      "accuracy": 0.9444444444444444
+    },
+    "certified_practising_accountant": {
+      "expected": 34,
+      "completed": 34,
+      "correct": 30,
+      "accuracy": 0.8823529411764706
+    },
+    "china_actuary": {
+      "expected": 37,
+      "completed": 37,
+      "correct": 36,
+      "accuracy": 0.972972972972973
+    },
+    "commercial_bank_finance": {
+      "expected": 20,
+      "completed": 20,
+      "correct": 19,
+      "accuracy": 0.95
+    },
+    "corporate_finance": {
+      "expected": 36,
+      "completed": 36,
+      "correct": 32,
+      "accuracy": 0.8888888888888888
+    },
+    "corporate_strategy_and_risk_management": {
+      "expected": 33,
+      "completed": 33,
+      "correct": 29,
+      "accuracy": 0.8787878787878788
+    },
+    "cost_accounting": {
+      "expected": 34,
+      "completed": 34,
+      "correct": 34,
+      "accuracy": 1.0
+    },
+    "econometrics": {
+      "expected": 18,
+      "completed": 18,
+      "correct": 14,
+      "accuracy": 0.7777777777777778
+    },
+    "economic_law": {
+      "expected": 25,
+      "completed": 25,
+      "correct": 22,
+      "accuracy": 0.88
+    },
+    "finance": {
+      "expected": 25,
+      "completed": 25,
+      "correct": 24,
+      "accuracy": 0.96
+    },
+    "financial_engineering": {
+      "expected": 26,
+      "completed": 26,
+      "correct": 23,
+      "accuracy": 0.8846153846153846
+    },
+    "financial_management": {
+      "expected": 24,
+      "completed": 24,
+      "correct": 21,
+      "accuracy": 0.875
+    },
+    "financial_markets": {
+      "expected": 39,
+      "completed": 39,
+      "correct": 36,
+      "accuracy": 0.9230769230769231
+    },
+    "fund_qualification_certificate": {
+      "expected": 68,
+      "completed": 68,
+      "correct": 61,
+      "accuracy": 0.8970588235294118
+    },
+    "futures_practitioner_qualification_certificate": {
+      "expected": 39,
+      "completed": 39,
+      "correct": 37,
+      "accuracy": 0.9487179487179487
+    },
+    "insurance": {
+      "expected": 33,
+      "completed": 33,
+      "correct": 29,
+      "accuracy": 0.8787878787878788
+    },
+    "intermediate_financial_accounting": {
+      "expected": 26,
+      "completed": 26,
+      "correct": 24,
+      "accuracy": 0.9230769230769231
+    },
+    "international_economics": {
+      "expected": 20,
+      "completed": 20,
+      "correct": 19,
+      "accuracy": 0.95
+    },
+    "international_finance": {
+      "expected": 17,
+      "completed": 17,
+      "correct": 17,
+      "accuracy": 1.0
+    },
+    "investments": {
+      "expected": 38,
+      "completed": 38,
+      "correct": 35,
+      "accuracy": 0.9210526315789473
+    },
+    "macroeconomics": {
+      "expected": 31,
+      "completed": 31,
+      "correct": 30,
+      "accuracy": 0.967741935483871
+    },
+    "management_accounting": {
+      "expected": 29,
+      "completed": 29,
+      "correct": 22,
+      "accuracy": 0.7586206896551724
+    },
+    "microeconomics": {
+      "expected": 40,
+      "completed": 40,
+      "correct": 38,
+      "accuracy": 0.95
+    },
+    "monetary_finance": {
+      "expected": 43,
+      "completed": 43,
+      "correct": 37,
+      "accuracy": 0.8604651162790697
+    },
+    "political_economy": {
+      "expected": 23,
+      "completed": 23,
+      "correct": 22,
+      "accuracy": 0.9565217391304348
+    },
+    "public_finance": {
+      "expected": 40,
+      "completed": 40,
+      "correct": 35,
+      "accuracy": 0.875
+    },
+    "securities_practitioner_qualification_certificate": {
+      "expected": 22,
+      "completed": 22,
+      "correct": 20,
+      "accuracy": 0.9090909090909091
+    },
+    "statistics": {
+      "expected": 35,
+      "completed": 35,
+      "correct": 35,
+      "accuracy": 1.0
+    },
+    "tax_law": {
+      "expected": 45,
+      "completed": 45,
+      "correct": 39,
+      "accuracy": 0.8666666666666667
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "benchmark": "ifeval-multiturn",
+  "expected": 300,
+  "total_rows": 1774,
+  "sampled": true,
+  "primary_metric": "prompt_loose",
+  "primary": 0.84,
+  "prompt_strict": 0.83,
+  "instruction_strict": 0.83,
+  "prompt_loose": 0.84,
+  "instruction_loose": 0.84,
+  "status_counts": {
+    "ok": 299,
+    "empty_or_abnormal": 1
+  },
+  "completion_tokens": {
+    "mean": 3025,
+    "p50": 1575,
+    "max": 21298
+  },
+  "duplicate_prompts": 0
+}

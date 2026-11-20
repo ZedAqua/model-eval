@@ -1,0 +1,23 @@
+{
+  "benchmark": "ifbench-multiturn",
+  "expected": 300,
+  "total_rows": 1387,
+  "sampled": true,
+  "primary_metric": "prompt_loose",
+  "primary": 0.81,
+  "prompt_strict": 0.7633333333333333,
+  "instruction_strict": 0.7633333333333333,
+  "prompt_loose": 0.81,
+  "instruction_loose": 0.81,
+  "status_counts": {
+    "ok": 298,
+    "empty_or_abnormal": 1,
+    "aborted_by_user": 1
+  },
+  "completion_tokens": {
+    "mean": 5017,
+    "p50": 3164,
+    "max": 39402
+  },
+  "duplicate_prompts": 0
+}

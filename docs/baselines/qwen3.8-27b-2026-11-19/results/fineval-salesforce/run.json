@@ -1,0 +1,27 @@
+{
+  "schema_version": 4,
+  "subset": "salesforce",
+  "dataset_sha256": "f016d0a9c3cca267d1af478f2697fce4afc40d12774f3fda0e216e4c30e1fbed",
+  "runner_sha256": "990841502d159de3f7eb402261c901461dd3008084de0849a3eb7a4548bad79a",
+  "dataset_rows": 1461,
+  "selected_rows": 1461,
+  "model": "Qwen3.8-27B",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "seed": 42,
+    "max_completion_tokens": 61440,
+    "reasoning_effort": "xhigh",
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    }
+  },
+  "scoring": "thinking_final_answer_leading_last_line_or_explicit_abcd_stop_only",
+  "secondary_scoring": "strict_single_abcd_nfkc_upper_stop_only",
+  "limit": null
+}

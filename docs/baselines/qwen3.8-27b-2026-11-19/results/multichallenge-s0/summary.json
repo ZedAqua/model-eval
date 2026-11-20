@@ -1,0 +1,14 @@
+{
+  "benchmark": "multichallenge",
+  "expected": 273,
+  "judged_on_server": false,
+  "responses_file": "multichallenge_responses.jsonl",
+  "status_counts": {
+    "ok": 273
+  },
+  "completion_tokens": {
+    "mean": 4034,
+    "p50": 2405,
+    "max": 39444
+  }
+}

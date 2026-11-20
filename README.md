@@ -21,15 +21,21 @@
 
 ## 当前公开状态
 
-本仓库已公开，用于让团队先查看评测职责、协议边界和后续目录规划。当前阶段暂未上传评测 runner、scorer 或其他可执行脚本；评测题目和数据版本由 ModelScope 管理。
+本仓库已公开。已上传标准模型评测的 runner 和 scorer（FinEval、AIME、GPQA Diamond、IFBench / IFBench 多轮 / IFEval 多轮、MultiChallenge、LiveCodeBench、BFCL v4），以及 Qwen3.8-27B 本地基线的分数汇总与运行配置。Hermes E2E 评测尚未上传。评测题目和数据版本由 ModelScope 管理；逐题运行输出不进 Git。
 
-## 计划目录
+- 运行方式：[`runners/autodl/README.md`](runners/autodl/README.md)
+- 官方打分代码与数据版本：[`manifests/official-sources-2026-11-19.json`](manifests/official-sources-2026-11-19.json)
+- 各评测官方取答案与判分方式：[`docs/official-scoring-review-2026-11-19.md`](docs/official-scoring-review-2026-11-19.md)
+- 基线结果：[`docs/baselines/qwen3.8-27b-2026-11-19/`](docs/baselines/qwen3.8-27b-2026-11-19/README.md)
+
+## 目录
 
 ```text
-benchmarks/   评测适配器与协议
-scorers/      程序评分器和 judge 封装
-runners/      本地、容器和批量运行入口
-configs/      固定评测配置
-manifests/    数据与环境版本索引
-reports/      报告生成代码，不保存大结果文件
+benchmarks/   各评测的运行脚本（读数据、组织提示词、调用官方打分）
+scorers/      本机 judge 判分与代码执行沙箱打分
+runners/      共用的生成逻辑（evalkit.py）和 AutoDL/vLLM 启动脚本
+manifests/    官方代码、数据与环境版本索引
+docs/         判分口径调研与基线报告（只放汇总，不放逐题输出）
+configs/      固定评测配置（规划中）
+reports/      报告生成代码（规划中）
 ```

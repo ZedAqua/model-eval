@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "benchmark": "multichallenge",
+  "questions_sha256": "bb23da758fdfae7ffb6ff4ffaa1a8e1523ac411ca20eb4467c41b58e8e5b88d4",
+  "selected_rows": 273,
+  "limit": null,
+  "sample_index": 0,
+  "runner_sha256": "9e20ecb8042544f2ac09201ad16a62c9166558aaa0297e1bc6a475b2be65e9af",
+  "evalkit_sha256": "39a93fa0556a30dd16eb2d99923c7c49fe88fc5b4190e77b22fc616965c2b455",
+  "model": "Qwen3.8-27B",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "max_completion_tokens": 61440,
+    "reasoning_effort": "xhigh",
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    },
+    "seed": 42
+  }
+}

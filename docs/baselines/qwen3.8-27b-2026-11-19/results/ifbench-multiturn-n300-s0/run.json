@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "benchmark": "ifbench-multiturn",
+  "dataset_sha256": "7dde40dd598101968ea839792192032dd2cee92e95a501ed182237b306c99bd1",
+  "selected_rows": 300,
+  "total_rows": 1387,
+  "limit": null,
+  "sample_size": 300,
+  "sampling_method": "evenly_spaced_floor((i+0.5)*N/n)",
+  "sample_index": 0,
+  "runner_sha256": "24b01cecc1411d54d066fe9c1a018a0180f64f8e9e75bc7df938ffe740096443",
+  "evalkit_sha256": "39a93fa0556a30dd16eb2d99923c7c49fe88fc5b4190e77b22fc616965c2b455",
+  "official_scorer": "allenai/IFBench run_eval.py (see official-src/SOURCES)",
+  "model": "Qwen3.8-27B",
+  "base_url": "http://127.0.0.1:8000/v1",
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "presence_penalty": 0.0,
+    "repetition_penalty": 1.0,
+    "max_completion_tokens": 61440,
+    "reasoning_effort": "xhigh",
+    "chat_template_kwargs": {
+      "enable_thinking": true
+    },
+    "seed": 42
+  }
+}
