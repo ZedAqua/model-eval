@@ -1,0 +1,60 @@
+{
+  "generated_at": "2026-11-19",
+  "purpose": "Qwen3.8-27B 本地基线（2026-11-19）所依赖的模型、官方打分代码和评测数据版本；数据本体由 ModelScope evaluation-datasets 管理，这里只记版本与指纹。",
+  "model": {
+    "id": "Qwen/Qwen3.8-27B",
+    "revision": "6e218df9c23850fe143662112737b1fcb62ee880",
+    "dtype": "bfloat16",
+    "note": "33 个文件在克隆到新实例后逐一按下载时的 model-manifest.json 复核 sha256"
+  },
+  "official_code": {
+    "ifbench": {
+      "repo": "allenai/IFBench",
+      "commit": "488918665d53f867fa908a293769ec6e71e74aec",
+      "used_for": "IFBench、IFBench 多轮、IFEval 多轮的 checker 与 run_eval.py（83 个 checker，官方 118 个单元测试通过）",
+      "python_deps": {"nltk": "3.9.2（官方 uv.lock 锁定版本）"}
+    },
+    "livecodebench": {
+      "repo": "LiveCodeBench/LiveCodeBench",
+      "commit": "28fef95ea8c9f7a547c8329f2cd3d32b92c1fa24",
+      "used_for": "CodeGenerationProblem 解码与 codegen_metrics 执行打分；提示词和代码提取规则与官方函数逐项比对一致"
+    },
+    "multichallenge": {
+      "repo": "ekwinox117/multi-challenge",
+      "commit": "5ccefcca6a39020d66c1383c4e6a809cb07afa33",
+      "license": "仓库无 LICENSE，未拷入本仓库，运行时指向本地克隆",
+      "questions_file": "data/benchmark_questions.jsonl",
+      "questions_sha256": "bb23da758fdfae7ffb6ff4ffaa1a8e1523ac411ca20eb4467c41b58e8e5b88d4",
+      "questions": 273
+    },
+    "simple_evals_gpqa": {
+      "repo": "openai/simple-evals",
+      "used_for": "GPQA 提示词、Random(0) 选项排列、ANSWER_PATTERN_MULTICHOICE；4 次重复 × 198 题与官方逻辑逐题一致",
+      "data_sha256": "41d1213cd7a4998605a26c2798500652572007161b3a92817ba46b35befcd305"
+    },
+    "bfcl": {
+      "package": "bfcl-eval",
+      "version": "2026.3.23",
+      "note": "用包内自带的 BFCL v4 数据与 checker；与 2025-07-17 版本地数据快照 20 个文件均不同，以包内为准"
+    },
+    "sufe_fineval": {
+      "repo": "SUFE-AIFLM-Lab/FinEval",
+      "used_for": "参考 unify_evaluator.py 的显式作答正则；未采用其“取第一个字母/选项原文/随机猜”兜底"
+    }
+  },
+  "datasets": {
+    "fineval_salesforce_eval": {"file": "fineval-scored-20261119/salesforce-eval.jsonl", "rows": 1461, "sha256": "f016d0a9c3cca267d1af478f2697fce4afc40d12774f3fda0e216e4c30e1fbed",
+                                 "source": "Salesforce/FinEval MMLU-finance parquet", "source_sha256": "5efc181ddfe24363bff581878f113e2234c60395888064cc55dc08953eee6d5f"},
+    "fineval_sufe_val_eval": {"file": "fineval-scored-20261119/sufe-val-eval.jsonl", "rows": 1151, "sha256": "c4426fc94250f1d0c8cf01b745da271e4963f26122175dba4abc32dffad44270",
+                              "source": "SUFE FinEval zip（val 有标签部分，模板 fixed_mcq_cn_v1）", "source_sha256": "44467786cfceab0783959ffb674598669207d28122ed6104f837f26a4f926764"},
+    "ifbench_test": {"file": "ifeval-ifbench-multichallenge/ifbench_test.parquet", "rows": 300, "sha256": "80037e4d99c39a55c1e2e7d5a863d8d9edeb5ebe136ba8c1e849f8c015027c6a"},
+    "ifbench_multiturn": {"file": "ifeval-ifbench-multichallenge/ifbench_multiturn.parquet", "rows": 1387, "sha256": "7dde40dd598101968ea839792192032dd2cee92e95a501ed182237b306c99bd1"},
+    "ifeval_multiturn": {"file": "ifeval-ifbench-multichallenge/ifeval_multiturn.parquet", "rows": 1774, "sha256": "60e5c7a4fcf57b4096297d07ac9ef8c295ba95a23c1255312196c01e2ee20b84"},
+    "multichallenge_test_parquet": {"file": "ifeval-ifbench-multichallenge/multichallenge_test.parquet", "rows": 266, "sha256": "2711646aba61f814823297714aaf757e3a1b71c66c501402231de48490650515",
+                                    "note": "是官方 273 题的子集（对话逐条一致）；评测改用官方 273 题文件，因为官方判分把缺失题判为不通过"},
+    "gpqa_diamond": {"file": "gpqa-diamond/gpqa_diamond.csv", "rows": 198, "sha256": "41d1213cd7a4998605a26c2798500652572007161b3a92817ba46b35befcd305"},
+    "livecodebench_v6": {"file": "livecodebench-v6-eval/livecodebench_v6.jsonl", "rows": 175, "sha256_prefix": "bb4c364f71921c4495a6ad15abe1a927350b72000",
+                         "note": "v6 相对 v5 新增的 175 题（2025-01-04 至 2025-04-06）；完整 sha256 见数据快照 SHA256SUMS"},
+    "aime_2025_2026": {"dir": "aime-eval-2025-2026", "rows_per_year": 30, "note": "指纹由快照 manifest.json 逐文件校验，见数据快照 SHA256SUMS"}
+  }
+}
