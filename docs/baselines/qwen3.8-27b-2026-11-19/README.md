@@ -11,10 +11,18 @@
 | IFEval 多轮 | 300 / 1,774（均匀抽样） | prompt-level loose | **84.0%** | FP8 | strict 83.0%；1 题空回复计失败 |
 | IFBench 多轮 | 300 / 1,387（均匀抽样） | prompt-level loose | **81.0%** | FP8 | strict 76.3%；1 题空回复、1 题人工中止，均计失败 |
 | MultiChallenge | 273 | 4 个维度通过率宏平均 | **63.66%** | FP8 | judge：gpt-6.1-sol；见下表 |
+| GPQA Diamond | 198 | 准确率 | 89.2 | — | 公开参考分，非本地实测；来源：[Qwen 官方模型卡](https://huggingface.co/Qwen/Qwen3.8-27B#text-performance) |
+| IFBench | 300 | 未注明 | 79.5 | — | 公开参考分，非本地实测；来源：[Qwen 官方模型卡](https://huggingface.co/Qwen/Qwen3.8-27B#text-performance)，未注明细分指标和采样口径 |
+| LiveCodeBench v6 | 未注明 | pass@1 | 90.3 | — | 公开参考分，非本地实测；来源：[Qwen 官方模型卡](https://huggingface.co/Qwen/Qwen3.8-27B#text-performance)，题集不一定与本地 175 题相同 |
+| AIME 2025 | 30 | 准确率（约 3 次采样均值） | 92.2% | — | 公开参考分，非本地实测；来源：第三方 [Prefill Systems](https://prefillsystems.com/benchmarks/qwen3-8-27b)，BF16 |
+| AIME 2026 | 30 | 准确率（约 3 次采样均值） | 91.7% | — | 公开参考分，非本地实测；来源：第三方 [Prefill Systems](https://prefillsystems.com/benchmarks/qwen3-8-27b)，BF16 |
+| BFCL v4（仅 non-live） | 1,150 | 准确率（3 次运行） | 88.1% ± 2.1 | — | 公开参考分，非本地实测；来源：第三方 [Model Spend Arena](https://msa.millaguie.net/providers/l-qwen3-8-27b.html)，UD-Q3_K_XL 量化版，不是完整 BFCL 总分 |
 
 MultiChallenge 分维度：INSTRUCTION_RETENTION 82.61%（69 题）、INFERENCE_MEMORY 66.37%（113）、RELIABLE_VERSION_EDITING 53.66%（41）、SELF_COHERENCE 52.00%（50）。
 
-**这些分数不能直接和公开榜单比较**：KV 缓存精度、提示词、采样次数、judge 模型都和公开报告不同。用于训练前后对比时，两边必须用相同的脚本版本、数据指纹、KV 精度和样本。
+表中分数加粗的是本地实测；未加粗、备注为“公开参考分”的是本地暂未跑的评测，取自公开报告（检索截至 2026-11-19），只作参考，不能当作本地基线，也不能和本地实测直接比较。IFBench 多轮、IFEval 多轮、MultiChallenge 未查到可核实的公开分数。
+
+**本地实测分数不能直接和公开榜单比较**：KV 缓存精度、提示词、采样次数、judge 模型都和公开报告不同。用于训练前后对比时，两边必须用相同的脚本版本、数据指纹、KV 精度和样本。
 
 ## 运行条件
 
