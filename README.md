@@ -26,7 +26,7 @@
 - 运行方式：[`runners/autodl/README.md`](runners/autodl/README.md)
 - 官方打分代码与数据版本：[`manifests/official-sources-2026-11-19.json`](manifests/official-sources-2026-11-19.json)
 - 各评测官方取答案与判分方式：[`docs/official-scoring-review-2026-11-19.md`](docs/official-scoring-review-2026-11-19.md)
-- 基线结果：[`docs/baselines/qwen3.8-27b-2026-11-19/`](docs/baselines/qwen3.8-27b-2026-11-19/README.md)
+- 基线结果：[`docs/baselines/qwen3.8-27b-2026-11-19/`](docs/baselines/qwen3.8-27b-2026-11-19/README.md)（模型侧）、[`docs/baselines/qwen3.8-flash-agentic-2026-11-12/`](docs/baselines/qwen3.8-flash-agentic-2026-11-12/README.md)（Agentic 侧，含 DS + Hermes 对照）
 
 ## 目录
 
