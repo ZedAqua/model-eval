@@ -28,6 +28,26 @@
 - 各评测官方取答案与判分方式：[`docs/official-scoring-review-2026-11-19.md`](docs/official-scoring-review-2026-11-19.md)
 - 基线结果：[`docs/baselines/qwen3.8-27b-2026-11-19/`](docs/baselines/qwen3.8-27b-2026-11-19/README.md)（模型侧）、[`docs/baselines/qwen3.8-flash-agentic-2026-11-12/`](docs/baselines/qwen3.8-flash-agentic-2026-11-12/README.md)（Agentic 侧，含 DS + Hermes 对照）
 
+## 基线结果：Qwen3.8-27B（模型侧，2026-11-19）
+
+加粗为本地实测（开启思考、`reasoning_effort=xhigh`、零样本，vLLM 0.34）；其余为公开报告分数，括号注明官方或第三方，均未在本地跑过，不能与本地实测直接比较。来源链接、模型版本和口径限制见[完整报告](docs/baselines/qwen3.8-27b-2026-11-19/README.md)。
+
+| 评测 | 题数 | 主指标 | Qwen3.8-27B | Qwen3.8-Flash-Next | DeepSeek-V4.1-Flash |
+|---|---|---|---|---|---|
+| FinEval Salesforce（英文 MMLU-finance） | 1,461 | 准确率 | **94.46%** | — | — |
+| FinEval SUFE 验证集（中文） | 1,151 | 准确率 | **91.31%** | — | — |
+| IFEval 多轮 | 300 / 1,774（均匀抽样） | prompt-level loose | **84.0%** | — | — |
+| IFBench 多轮 | 300 / 1,387（均匀抽样） | prompt-level loose | **81.0%** | — | — |
+| MultiChallenge | 273 | 4 个维度通过率宏平均 | **63.66%**（judge：gpt-6.1-sol） | — | 74.90 ± 5.30（Scale 榜单，1017 版，judge 不同） |
+| GPQA Diamond | 198 | 准确率 | 89.2（官方） | 91.7%（官方） | 90.9%（官方，原版） |
+| IFBench | 300 | — | 79.5（官方） | 81.3%（官方） | 76.667%（原版）/ 76.33%（1017 版）（NVIDIA 复测） |
+| LiveCodeBench v6 | — | pass@1 | 90.3（官方） | 91.9%（官方） | — |
+| AIME 2025 | 30 | 准确率 | 92.2%（第三方） | — | — |
+| AIME 2026 | 30 | 准确率 | 91.7%（第三方） | 90.00%（第三方，贪心单次） | 100%（官方，原版，最大推理强度） |
+| BFCL v4（仅 non-live） | 1,150 | 准确率 | 88.1% ± 2.1（第三方，量化版） | 83.0% ± 2.4（第三方，量化版） | — |
+
+FinEval 用 BF16 KV 缓存，IFEval/IFBench 多轮和 MultiChallenge 用 FP8 KV 缓存。Agentic 侧结果（Qwen3.8-Flash 与 DS + Hermes 对照）见 [`docs/baselines/qwen3.8-flash-agentic-2026-11-12/`](docs/baselines/qwen3.8-flash-agentic-2026-11-12/README.md)。
+
 ## 目录
 
 ```text
