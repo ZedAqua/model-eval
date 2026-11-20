@@ -46,7 +46,18 @@
 | AIME 2026 | 30 | 准确率 | 91.7%（第三方） | 90.00%（第三方，贪心单次） | 100%（官方，原版，最大推理强度） |
 | BFCL v4（仅 non-live） | 1,150 | 准确率 | 88.1% ± 2.1（第三方，量化版） | 83.0% ± 2.4（第三方，量化版） | — |
 
-FinEval 用 BF16 KV 缓存，IFEval/IFBench 多轮和 MultiChallenge 用 FP8 KV 缓存。Agentic 侧结果（Qwen3.8-Flash 与 DS + Hermes 对照）见 [`docs/baselines/qwen3.8-flash-agentic-2026-11-12/`](docs/baselines/qwen3.8-flash-agentic-2026-11-12/README.md)。
+FinEval 用 BF16 KV 缓存，IFEval/IFBench 多轮和 MultiChallenge 用 FP8 KV 缓存。
+
+## 基线结果：Agentic 侧（2026-11-12）
+
+Agentic 评测用 **Qwen3.8-Flash** 代替 Qwen3.8-27B（两者不是同一个模型，不能当作 27B 的 Agentic 基线）。两侧接入同一版本的公司 Hermes，只换主模型；裁判 gpt-6.1-sol，每题跑一次，只做内部比较。运行条件、差距归因和 DS 完整基线见[完整报告](docs/baselines/qwen3.8-flash-agentic-2026-11-12/README.md)。
+
+| 评测 | 范围 | Qwen3.8-Flash | DS（deepseek-v4.1-flash-1017）+ Hermes | 备注 |
+|---|---|---|---|---|
+| τ²-bench（τ³ v1.0） | 278 全量 | **247/278（88.8%）** | 253/278（91.0%） | 差距全在 telecom（102 vs 110） |
+| Seal-0 | 111 全量 | **51/111（45.9%）** | 64/111（57.7%） | Qwen 批次搜索环境有混杂，差距不能全归因到模型 |
+| SpreadsheetBench 2 | 50 题（financial_model 25 + template 25） | **19/50** | 18/50 | 推理强度 xhigh；4 题超时计 0 |
+| FinSearchComp T2/T3 | 50 题抽样 | **31/50（62%）** | 38/50（76%） | 3 题超时计 0；两侧运行链路不同 |
 
 ## 目录
 
